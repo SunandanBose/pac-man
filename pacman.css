@@ -1,0 +1,12 @@
+.game-container {
+	height: 400px;
+	width: 600px;
+	background-color: #ffccbb;
+	border-radius: 15px;
+	margin: 0 auto;
+}
+
+.player {
+	height: 25px;
+	width: 25px;
+}

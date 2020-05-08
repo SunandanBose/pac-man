@@ -8,5 +8,32 @@
   
 document.getElementById('log').innerHTML = 'Down was pressed';
 window.addEventListener('keydown', function(event) { 
-	if(event.keyCode == 37) document.getElementById('log').innerHTML = 'Down was pressed again';
+	let player = document.getElementById("player");
+	let x = player.style.left;
+	let y = player.style.top;
+	if(event.keyCode == 37) {
+
+		player.style.left = distanceToMove(x,-10);
+		document.getElementById('log').innerHTML = 'Left was pressed again'
+	};
+	if(event.keyCode == 38) {
+		player.style.top= distanceToMove(y,-10);
+		document.getElementById('log').innerHTML = 'Up was pressed again'
+	};
+	if(event.keyCode == 39) {
+		player.style.left= distanceToMove(x,10);
+		document.getElementById('log').innerHTML = 'Right was pressed again'
+	};
+	if(event.keyCode == 40) {
+		player.style.top= distanceToMove(y,10);
+		document.getElementById('log').innerHTML = 'Down was pressed again'
+	};
 });
+
+function distanceToMove(actualValue, toMove){
+	if(actualValue === "")
+		return toMove + 'px';
+	else{
+		return (Number(actualValue.substring(0,actualValue.length -2)) + toMove )+ 'px';
+	}
+}

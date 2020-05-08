@@ -4,3 +4,9 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
+
+  
+document.getElementById('log').innerHTML = 'Down was pressed';
+window.addEventListener('keydown', function(event) { 
+	if(event.keyCode == 37) document.getElementById('log').innerHTML = 'Down was pressed again';
+});

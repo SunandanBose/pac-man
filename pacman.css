@@ -1,9 +1,10 @@
 .game-container {
-	height: 400px;
-	width: 600px;
+	height: 375px;
+	width: 585px;
 	background-color: #ffccbb;
 	border-radius: 15px;
 	margin: 0 auto;
+	overflow: hidden;
 }
 
 .player {

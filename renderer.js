@@ -4,9 +4,16 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-
-  
-document.getElementById('log').innerHTML = 'Down was pressed';
+function loadCoins(){
+	let gameContainer = document.getElementById("game-container");
+	for(let i=0;i<462;i++){
+		let img = document.createElement('img');
+		img.src = "./assets/coin.gif";
+		img.className = "coin";
+		gameContainer.appendChild(img);
+	}
+}
+loadCoins();
 window.addEventListener('keydown', function(event) { 
 	let player = document.getElementById("player");
 	let x = player.style.left;
